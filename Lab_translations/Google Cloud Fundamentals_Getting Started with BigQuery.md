@@ -28,6 +28,7 @@ Note: *Because you told BigQuery to automatically discover the schema when you l
     bq query "select int64_field_6 as hour, count(*) as hitcount from logdata.accesslog group by hour order by hour"
 
 From the query result,  at what time of day is the website busiest? When is it least busy?
+
 Second query:
 
     bq query "select string_field_10 as request, count(*) as requestcount from logdata.accesslog group by request order by requestcount desc"
